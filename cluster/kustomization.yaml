@@ -1,2 +1,4 @@
 resources:
   - app-argocd.yaml
+  - ns-monitoring.yaml
+  - app-kube-prometheus-stack.yaml
