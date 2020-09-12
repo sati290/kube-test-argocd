@@ -1,4 +1,4 @@
 resources:
-  - https://github.com/argoproj/argo-cd/manifests/cluster-install
+  - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v1.7.4
 
 namespace: argocd
