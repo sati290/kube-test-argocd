@@ -23,6 +23,31 @@ spec:
                   resources:
                     requests:
                       storage: 16Gi
+          additionalServiceMonitors:
+            - name: argocd-metrics
+              selector:
+                matchLabels:
+                  app.kubernetes.io/name: argocd-metrics
+              namespaceSelector:
+                matchNames: ["argocd"]
+              endpoints:
+                - port: metrics
+            - name: argocd-server-metrics
+              selector:
+                matchLabels:
+                  app.kubernetes.io/name: argocd-server-metrics
+              namespaceSelector:
+                matchNames: ["argocd"]
+              endpoints:
+                - port: metrics
+            - name: argocd-repo-server-metrics
+              selector:
+                matchLabels:
+                  app.kubernetes.io/name: argocd-repo-server-metrics
+              namespaceSelector:
+                matchNames: ["argocd"]
+              endpoints:
+                - port: metrics
         grafana:
           service:
             type: NodePort
