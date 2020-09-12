@@ -12,7 +12,7 @@ spec:
     path: argocd
     repoURL: https://github.com/sati290/kube-test-argocd
     targetRevision: HEAD
-  # syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
