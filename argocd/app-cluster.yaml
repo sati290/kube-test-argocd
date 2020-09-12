@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: cluster
+    repoURL: https://github.com/sati290/kube-test-argocd
+    targetRevision: HEAD
+  # syncPolicy:
+  #   automated:
+  #     prune: true
+  #     selfHeal: true
